@@ -1,5 +1,6 @@
 package com.aryan.cca.mp2.controllers;
 
+import com.aryan.cca.mp2.clients.DdbClient;
 import com.aryan.cca.mp2.mapping.InputMapping;
 
 import org.springframework.http.ResponseEntity;
@@ -10,19 +11,20 @@ import org.springframework.web.bind.annotation.RestController;
 
 
 @RestController
-public class MainController {
-    public static Integer num = 0;
+public class MainController {   
     
+   DdbClient dynamoDb = new DdbClient();
+
     @GetMapping("/")
     public ResponseEntity<String> get() {
-        return ResponseEntity.ok(num.toString());
+       return ResponseEntity.ok(dynamoDb.getNumber());
     }
 
     @PostMapping("/")
     public ResponseEntity<String> post(@RequestBody InputMapping input) {
-        num = input.getNum();
+       dynamoDb.putNumber(String.valueOf(input.getNum()));
 
-        return ResponseEntity.ok(num.toString());
+        return ResponseEntity.ok(dynamoDb.getNumber());
     }
     
 }
