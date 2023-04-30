@@ -1,6 +1,6 @@
 package com.aryan.cca.mp2.controllers;
 
-import com.aryan.cca.mp2.clients.DdbClient;
+// import com.aryan.cca.mp2.clients.DdbClient;
 import com.aryan.cca.mp2.mapping.InputMapping;
 
 import org.springframework.http.ResponseEntity;
@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class MainController {   
     
-   DdbClient dynamoDb = new DdbClient();
+   // DdbClient dynamoDb = new DdbClient();
    public static Integer num = 0;
 
     @GetMapping("/")
