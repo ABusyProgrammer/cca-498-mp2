@@ -14,17 +14,21 @@ import org.springframework.web.bind.annotation.RestController;
 public class MainController {   
     
    DdbClient dynamoDb = new DdbClient();
+   public static Integer num = 0;
 
     @GetMapping("/")
     public ResponseEntity<String> get() {
-       return ResponseEntity.ok(dynamoDb.getNumber());
+      //  return ResponseEntity.ok(dynamoDb.getNumber());
+      return ResponseEntity.ok(num.toString());
     }
 
     @PostMapping("/")
     public ResponseEntity<String> post(@RequestBody InputMapping input) {
        dynamoDb.putNumber(String.valueOf(input.getNum()));
 
-        return ResponseEntity.ok(dynamoDb.getNumber());
+      //   return ResponseEntity.ok(dynamoDb.getNumber());
+      num = input.getNum();
+      return ResponseEntity.ok(num.toString());
     }
     
 }
