@@ -24,7 +24,7 @@ public class MainController {
 
     @PostMapping("/")
     public ResponseEntity<String> post(@RequestBody InputMapping input) {
-       dynamoDb.putNumber(String.valueOf(input.getNum()));
+      //  dynamoDb.putNumber(String.valueOf(input.getNum()));
 
       //   return ResponseEntity.ok(dynamoDb.getNumber());
       num = input.getNum();
