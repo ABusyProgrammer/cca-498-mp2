@@ -17,8 +17,8 @@ import software.amazon.awssdk.services.dynamodb.model.ResourceInUseException;
 import software.amazon.awssdk.services.dynamodb.waiters.DynamoDbWaiter;
 
 /*
- * curl -X POST http://localhost:8080/ -H 'Content-Type: application/json' -d '{"num": 100}'
- * curl -X GET http://localhost:8080/
+ * curl -X POST http://mp2-546641303.us-east-2.elb.amazonaws.com/ -H 'Content-Type: application/json' -d '{"num": 100}'
+ * curl -X GET http://mp2-546641303.us-east-2.elb.amazonaws.com/
  */
 public class DdbClient {	
 	private DynamoDbEnhancedClient ddbClient;

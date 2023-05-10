@@ -4,11 +4,11 @@ import json
 url = 'https://seorwrpmwh.execute-api.us-east-1.amazonaws.com/prod/mp2-autograder-2022-spring'
 
 payload = {
-		'ip_address1': '3.15.229.90:8080',
-		'ip_address2': '3.15.31.78:8080',
-		'load_balancer' : 'MP2-1899071774.us-east-2.elb.amazonaws.com',
+		'ip_address1': '3.133.137.187:8080',
+		'ip_address2': '18.218.177.242:8080',
+		'load_balancer' : 'MP2-546641303.us-east-2.elb.amazonaws.com',
 		'submitterEmail': 'aryansk2@illinois.edu',
-		'secret': '43e6zLpa3kbgolny'
+		'secret': 'O4RMq0Ugatd0NCw2'
 		}
 
 
